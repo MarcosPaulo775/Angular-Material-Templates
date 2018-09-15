@@ -1,3 +1,41 @@
-<p>
-  TEXTÃO DA POHA!
-</p>
+<div fxLayout="row">
+  <nav class="menu-container">
+
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+
+    <div class="flex-spacer"></div>
+
+    <button mat-button [matMenuTriggerFor]="usuario">
+      Marcos Paulo <mat-icon>account_box</mat-icon>
+    </button>
+    <button mat-icon-button>
+      <mat-icon>exit_to_app</mat-icon>
+    </button>
+  </nav>
+</div>
+
+
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>
+    <mat-icon>dialpad</mat-icon>
+    <span>Redial</span>
+  </button>
+  <button mat-menu-item disabled>
+    <mat-icon>voicemail</mat-icon>
+    <span>Check voicemail</span>
+  </button>
+  <button mat-menu-item>
+    <mat-icon>notifications_off</mat-icon>
+    <span>Disable alerts</span>
+  </button>
+</mat-menu>
+
+<mat-menu #usuario="matMenu">
+  <button mat-menu-item>
+    mat-sidenav
+  </button>
+</mat-menu>
+
+<br><br><br>
