@@ -79,7 +79,7 @@ import {
     MatToolbarModule,
     MatTooltipModule,
     MatTreeModule,
-    FlexLayoutModule
+    FlexLayoutModule,
   ],
   exports: [
     CdkTableModule,
@@ -119,6 +119,7 @@ import {
     MatToolbarModule,
     MatTooltipModule,
     MatTreeModule,
+    FlexLayoutModule,
   ],
   providers: []
 })

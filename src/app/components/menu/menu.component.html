@@ -1,41 +1,81 @@
-<div fxLayout="row">
-  <nav class="menu-container">
+<mat-drawer-container hasBackdrop="true">
+  <mat-drawer #drawer mode="over" position="end">
+    <mat-toolbar>
 
-    <button mat-icon-button [matMenuTriggerFor]="menu">
-      <mat-icon>menu</mat-icon>
-    </button>
+      <mat-toolbar-row class="drawer-row">
+        <button mat-button class="drawer-button">
+          <span>Conta</span>
+        </button>
+        <div class="flex-spacer"></div>
+        <mat-icon>account_circle</mat-icon>
+      </mat-toolbar-row>
 
-    <div class="flex-spacer"></div>
+      <mat-toolbar-row class="drawer-row">
+        <button mat-button class="drawer-button">
+          <span>Configurações</span>
+        </button>
+        <div class="flex-spacer"></div>
+        <mat-icon>settings</mat-icon>
+      </mat-toolbar-row>
 
-    <button mat-button [matMenuTriggerFor]="usuario">
-      Marcos Paulo <mat-icon>account_box</mat-icon>
-    </button>
-    <button mat-icon-button>
-      <mat-icon>exit_to_app</mat-icon>
-    </button>
-  </nav>
-</div>
+      <mat-toolbar-row class="drawer-row">
+        <button mat-button class="drawer-button">
+          <span>Sair</span>
+        </button>
+        <div class="flex-spacer"></div>
+        <mat-icon>exit_to_app</mat-icon>
+      </mat-toolbar-row>
 
+    </mat-toolbar>
+  </mat-drawer>
+  <mat-drawer-content>
+
+    <div>
+      <nav class="menu-container">
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+          <mat-icon>menu</mat-icon>
+        </button>
+
+        <div class="flex-spacer"></div>
+
+        <button mat-button (click)="drawer.toggle()">
+          Marcos Paulo <mat-icon>account_box</mat-icon>
+        </button>
+      </nav>
+    </div>
+
+    <router-outlet></router-outlet>
+
+  </mat-drawer-content>
+</mat-drawer-container>
 
 <mat-menu #menu="matMenu">
-  <button mat-menu-item>
-    <mat-icon>dialpad</mat-icon>
-    <span>Redial</span>
+  <button mat-menu-item routerLink="/Menu/Home">
+    <mat-icon>home</mat-icon>
+    <span>Home</span>
   </button>
-  <button mat-menu-item disabled>
-    <mat-icon>voicemail</mat-icon>
-    <span>Check voicemail</span>
+  <button mat-menu-item routerLink="/Menu/Representantes">
+    <mat-icon>people</mat-icon>
+    <span>Representantes</span>
   </button>
-  <button mat-menu-item>
-    <mat-icon>notifications_off</mat-icon>
-    <span>Disable alerts</span>
+  <button mat-menu-item routerLink="/Menu/Transportadoras">
+    <mat-icon>local_shipping</mat-icon>
+    <span>Transportadoras</span>
+  </button>
+  <button mat-menu-item routerLink="/Menu">
+    <mat-icon>star</mat-icon>
+    <span>Produtos</span>
+  </button>
+  <button mat-menu-item routerLink="/Menu">
+    <mat-icon>how_to_reg</mat-icon>
+    <span>Clientes</span>
+  </button>
+  <button mat-menu-item routerLink="/Menu">
+    <mat-icon>swap_horiz</mat-icon>
+    <span>Movimentação</span>
+  </button>
+  <button mat-menu-item routerLink="/Menu">
+    <mat-icon>local_grocery_store</mat-icon>
+    <span>Vendas</span>
   </button>
 </mat-menu>
-
-<mat-menu #usuario="matMenu">
-  <button mat-menu-item>
-    mat-sidenav
-  </button>
-</mat-menu>
-
-<br><br><br>

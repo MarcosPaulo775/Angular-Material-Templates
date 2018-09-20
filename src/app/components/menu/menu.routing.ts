@@ -9,13 +9,30 @@ const menuRoutes: Routes = [
     {
         path: '',
         component: MenuComponent,
-        children: []
+        children: [
+            {
+                path: '',
+                redirectTo: 'Home',
+                pathMatch: 'full'
+              },
+              {
+                path: 'Home',
+                loadChildren: '../home/home.module#HomeModule'
+              },
+              {
+                path: 'Representantes',
+                loadChildren: '../representantes/representantes.module#RepresentantesModule'
+              },
+              {
+                path: 'Transportadoras',
+                loadChildren: '../transportadoras/transportadoras.module#TransportadorasModule'
+              },
+        ]
     }
 ]
 
 @NgModule({
     imports: [
-        CommonModule,
         RouterModule.forChild(menuRoutes)
     ],
     providers: [],
