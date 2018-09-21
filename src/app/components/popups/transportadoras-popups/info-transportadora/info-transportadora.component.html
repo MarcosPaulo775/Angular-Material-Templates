@@ -1,3 +1,28 @@
-<p>
-  info-transportadora works!
-</p>
+<h2 mat-dialog-title>Informações da Transportadora</h2>
+
+<div mat-dialog-content class="content">
+
+  <div fxFlex fxLayout="column">
+    <h5>Dados Pessoais</h5>
+
+    <a>Nome: Correios</a>
+    <br>
+    <a>CNPJ: 00000000/0001-00</a>
+    <br>
+    <a>Responsavel: Marcos</a>
+    <br>
+    <a>Cargo e/ou Departamento: Mortorista</a>
+    <br>
+    <a>Email: marcos775paulo@hotmail.com</a>
+    <br>
+    <a>Telefone Fixo: 3297-6069</a>
+    <br>
+    <a>Telefone Movel: 9414-8756</a>
+
+    <div mat-dialog-actions fxLayoutAlign="center center">
+      <button mat-raised-button (click)="onNoClick()">Fechar</button>
+    </div>
+
+  </div>
+
+</div>

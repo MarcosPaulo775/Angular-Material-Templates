@@ -18,7 +18,7 @@ import { ConfirmComponent } from '../popups/confirm/confirm.component';
     ReactiveFormsModule,
     SharedModule
   ],
-  declarations: [RepresentantesComponent, AddRepresentanteComponent , InfoRepresentanteComponent, ConfirmComponent],
-  entryComponents: [AddRepresentanteComponent, InfoRepresentanteComponent, ConfirmComponent]
+  declarations: [RepresentantesComponent, AddRepresentanteComponent , InfoRepresentanteComponent],
+  entryComponents: [AddRepresentanteComponent, InfoRepresentanteComponent]
 })
 export class RepresentantesModule { }

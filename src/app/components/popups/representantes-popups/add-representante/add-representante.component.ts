@@ -40,6 +40,6 @@ export class AddRepresentanteComponent implements OnInit {
 
   save() {
     this.dialogRef.close(this.formulario.value);
-}
+  }
 
 }

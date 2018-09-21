@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+
 
 @Component({
   selector: 'app-info-transportadora',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InfoTransportadoraComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public dialogRef: MatDialogRef<InfoTransportadoraComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: String,
+  ) { }
 
   ngOnInit() {
   }
 
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
 }

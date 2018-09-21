@@ -1,0 +1,23 @@
+table {
+    width: 100%;
+  }
+  
+  .table-icons {
+    width: 10px;
+  }
+  
+  .table-container {
+    overflow-x: scroll;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  .fixed-button {
+    position: fixed!important;
+    bottom: 20px;
+    right: 20px;
+    background-color: #009688;
+  }

@@ -39,6 +39,7 @@ import {
   MatTooltipModule,
   MatTreeModule,
 } from '@angular/material';
+import { ConfirmComponent } from '../components/popups/confirm/confirm.component';
 
 @NgModule({
   imports: [
@@ -120,8 +121,11 @@ import {
     MatTooltipModule,
     MatTreeModule,
     FlexLayoutModule,
+    ConfirmComponent
   ],
-  providers: []
+  providers: [],
+  declarations: [ConfirmComponent],
+  entryComponents: [ConfirmComponent]
 })
 
 export class SharedModule { }

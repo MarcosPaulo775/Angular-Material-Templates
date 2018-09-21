@@ -5,7 +5,3 @@ mat-form-field{
 .content{
     height: 390px;
 }
-
-.flex-spacer{
-    flex-grow: 1;
-}
