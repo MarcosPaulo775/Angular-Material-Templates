@@ -27,6 +27,23 @@ const menuRoutes: Routes = [
                 path: 'Transportadoras',
                 loadChildren: '../transportadoras/transportadoras.module#TransportadorasModule'
               },
+              {
+                path: 'Produtos',
+                loadChildren: '../produtos/produtos.module#ProdutosModule'
+              },
+              {
+                path: 'Clientes',
+                loadChildren: '../clientes/clientes.module#ClientesModule'
+              },
+              {
+                path: 'Movimentacao',
+                loadChildren: '../clientes/clientes.module#ClientesModule'
+              },
+              {
+                path: 'Vendas',
+                loadChildren: '../vendas/vendas.module#VendasModule'
+              },
+
         ]
     }
 ]

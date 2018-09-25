@@ -8,7 +8,6 @@ import { SharedModule } from '../../shared/shared.module';
 import { RepresentantesComponent } from './representantes.component';
 import { AddRepresentanteComponent } from '../popups/representantes-popups/add-representante/add-representante.component';
 import { InfoRepresentanteComponent } from '../popups/representantes-popups/info-representante/info-representante.component';
-import { ConfirmComponent } from '../popups/confirm/confirm.component';
 
 @NgModule({
   imports: [

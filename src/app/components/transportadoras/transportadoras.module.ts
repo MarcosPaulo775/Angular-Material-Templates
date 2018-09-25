@@ -8,7 +8,6 @@ import { SharedModule } from '../../shared/shared.module';
 import { TransportadorasComponent } from './transportadoras.component';
 import { AddTransportadoraComponent } from '../popups/transportadoras-popups/add-transportadora/add-transportadora.component';
 import { InfoTransportadoraComponent } from '../popups/transportadoras-popups/info-transportadora/info-transportadora.component';
-import { ConfirmComponent } from '../popups/confirm/confirm.component';
 
 @NgModule({
   imports: [
