@@ -16,7 +16,7 @@ export interface Cliente {
 
 const Clientes: Cliente[] = [
   { nome: "Marcos Paulo", CPF: "064.439.361-08", email: "marcos775paulo@hotmail.com", telefone: "0000-0000", celular: "1111-1111" },
-  { nome: "Paulo", CPF: "064.439.361-08", email: "marcos775paulo@hotmail.com", telefone: "0000-0000", celular: "1111-1111" },
+  { nome: "ABCDE Embalagens e Produtos de Limpeza", CPF: "064.439.361-08", email: "marcos775paulo@hotmail.com", telefone: "0000-0000", celular: "1111-1111" },
   { nome: "Marcos", CPF: "064.439.361-08", email: "marcos775paulo@hotmail.com", telefone: "0000-0000", celular: "1111-1111" },
   { nome: "João", CPF: "064.439.361-08", email: "joao@hotmail.com", telefone: "0000-0000", celular: "1111-1111" },
   { nome: "Maria", CPF: "064.439.361-08", email: "maria@hotmail.com", telefone: "0000-0000", celular: "1111-1111" },
@@ -30,7 +30,7 @@ const Clientes: Cliente[] = [
 export class ClientesComponent implements OnInit {
 
   //Table
-  displayedColumns: string[] = ['nome', 'CPF', 'email', 'foneFixo', 'foneMovel', 'info', 'edit', 'delete'];
+  displayedColumns: string[] = ['nome', 'CPF', 'email', 'info', 'edit', 'delete'];
   dataSource = new MatTableDataSource(Clientes);
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -53,7 +53,7 @@ export class ClientesComponent implements OnInit {
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
-  
+
   openDialogAdd(): void {
     if (this.isEdit) {
       const dialogRef = this.dialog.open(AddPessoaFisicaComponent, {
@@ -76,7 +76,7 @@ export class ClientesComponent implements OnInit {
   infoPessoaFisica(): void {
     const dialogRef = this.dialog.open(InfoPessoaFisicaComponent);
   }
-  
+
 
   deletePessoaFisica(): void {
     const dialogRef = this.dialog.open(ConfirmComponent);

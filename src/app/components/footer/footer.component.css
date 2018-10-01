@@ -13,3 +13,12 @@
 .logo{
     height: 50px;
 }
+
+.text-min{
+    font-size: small;
+    font: 600;
+}
+
+img{
+    width: 16px;
+}

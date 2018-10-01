@@ -22,3 +22,7 @@ table {
     background-color: #009688;
     z-index: 1;
 }
+
+.table-column {
+    min-width: 120px;
+}

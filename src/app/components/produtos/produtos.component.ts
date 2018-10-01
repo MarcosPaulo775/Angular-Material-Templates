@@ -11,8 +11,8 @@ export interface Produto {
 }
 
 const produtos: Produto[] = [
-  { id: "1", nome: "Copo 200 ml" },
-  { id: "2", nome: "Copo 300 ml" },
+  { id: "1", nome: "Pollycopos CP PP 50 E TRANSPARENTE(50x100)" },
+  { id: "2", nome: "Cristal Copos CP PP 50 E TRANSPARENTE(50x100)" },
   { id: "3", nome: "Copo 250 ml" },
   { id: "4", nome: "Copo 20 ml" },
   { id: "5", nome: "Copo 50 ml" },

@@ -7,8 +7,12 @@ const appRoutes: Routes = [
         path: 'Menu',
         loadChildren: './components/menu/menu.module#MenuModule'
     },
+    {
+        path: 'Login',
+        loadChildren: './components/login/login.module#LoginModule'
+    },
+    { path: '', redirectTo: '/Login', pathMatch: 'full' }
 
-    { path: '', redirectTo: '/Menu/Home', pathMatch: 'full' }
 
 ]
 

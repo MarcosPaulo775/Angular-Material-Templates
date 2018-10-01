@@ -1,0 +1,27 @@
+<div fxFlex fxLayout="column" fxLayoutAlign="center center" >
+  <mat-card>
+    <img FxLayoutAlign="center" [src]="'assets/image/login.jpg'" alt="image" height="auto">
+    <br>
+    <br><br>
+
+    <form [formGroup]="formulario">
+      <div fxLayout="column">
+        <div fxLayoutAlign="center" fxLayout="column">
+          <mat-form-field>
+            <input matInput placeholder="Usuário" formControlName="usuario" required>
+          </mat-form-field>
+
+          <mat-form-field>
+            <input matInput placeholder="Senha" type="password" formControlName="senha" required>
+          </mat-form-field>
+        </div>
+
+        <div fxLayoutAlign="end end">
+          <button mat-raised-button color="primary" type="submit">Entrar</button>
+        </div>
+      </div>
+    </form>
+
+  </mat-card>
+
+</div>

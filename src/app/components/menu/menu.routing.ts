@@ -37,7 +37,7 @@ const menuRoutes: Routes = [
               },
               {
                 path: 'Movimentacao',
-                loadChildren: '../clientes/clientes.module#ClientesModule'
+                loadChildren: '../movimentacao/movimentacao.module#MovimentacaoModule'
               },
               {
                 path: 'Vendas',

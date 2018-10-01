@@ -20,4 +20,5 @@ table {
     bottom: 20px;
     right: 20px;
     background-color: #009688;
+    z-index: 1;
 }

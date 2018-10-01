@@ -2,10 +2,6 @@ table {
     width: 100%;
 }
 
-th{
-    margin: 50px;
-}
-
 .table-icons {
     width: 10px;
 }
@@ -25,4 +21,8 @@ th{
     right: 20px;
     background-color: #009688;
     z-index: 1;
+}
+
+.table-column {
+    min-width: 120px;
 }
