@@ -8,5 +8,16 @@
 
 .text-min {
     font-size: small;
-    font: 600;
+}
+
+
+footer {
+    margin: auto;
+    width: 100%;
+    bottom: 0;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.flex-spacer {
+    flex-grow: 1;
 }

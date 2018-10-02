@@ -26,3 +26,8 @@ table {
     background-color: #009688;
     z-index: 1;
 }
+
+mat-toolbar {
+    margin-top: 56px;
+    font-family: 'Lobster', cursive;
+}
