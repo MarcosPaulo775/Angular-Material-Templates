@@ -22,11 +22,10 @@ const movRoutes: Routes = [
                 path: 'Entrada',
                 loadChildren: './entrada/entrada.module#EntradaModule'
             },
-            /*
-          {
-            path: 'Saida',
-            loadChildren: './add-venda/add-venda.module#AddVendaModule'
-          },*/
+            {
+                path: 'Saida',
+                loadChildren: './saida/saida.module#SaidaModule'
+            },
         ]
     }
 ]

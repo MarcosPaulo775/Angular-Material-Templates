@@ -10,6 +10,10 @@ table {
     overflow-x: scroll;
 }
 
+.table-column {
+    min-width: 120px;
+}
+
 .mat-form-field {
     font-size: 14px;
     width: 100%;
@@ -21,8 +25,4 @@ table {
     right: 20px;
     background-color: #009688;
     z-index: 1;
-}
-
-.table-column {
-    min-width: 120px;
 }

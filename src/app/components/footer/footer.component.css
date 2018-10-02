@@ -1,4 +1,4 @@
-.footer-container{
+.footer-container {
     display: flex;
     align-items: center;
     padding: 35px 16px;
@@ -6,19 +6,7 @@
     color: #fff;
 }
 
-.mat-icon-white{
-    color: #fff;
-}
-
-.logo{
-    height: 50px;
-}
-
-.text-min{
+.text-min {
     font-size: small;
     font: 600;
-}
-
-img{
-    width: 16px;
 }

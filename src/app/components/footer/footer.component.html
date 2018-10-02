@@ -1,26 +1,11 @@
-<div>
-  <mat-grid-list cols="3" rowHeight="4:1" class="footer-container">
+<footer fxFlex fxLayoutAlign="center center" class="footer-container">
 
-    <mat-grid-tile>
-      <nav class="footer-container">
-        <a href="http://poligyn.com.br/">
-          <mat-icon class="mat-icon-white">http</mat-icon>
-        </a>
-      </nav>
-    </mat-grid-tile>
+  <div fxLayoutAlign="center center" fxLayout="column">
+    <a>{{date}}</a>
+    <p fxLayoutAlign="center center" class="text-min">
+      <mat-icon>code</mat-icon> Version: 1.0
+    </p>
+  </div>
 
-    <mat-grid-tile>
-      <div fxFlex fxLayout="column" fxLayoutAlign="end center">
-        <p fxLayoutAlign="center center" class="text-min">
-          <mat-icon>code</mat-icon> Version: 1.0
-        </p>
-      </div>
 
-    </mat-grid-tile>
-
-    <mat-grid-tile>
-      <span>PollyCopos</span>
-      <mat-icon>clear</mat-icon>
-    </mat-grid-tile>
-  </mat-grid-list>
-</div>
+</footer>
