@@ -1,0 +1,26 @@
+<mat-card>
+  <mat-card-subtitle>Dados de Entrada</mat-card-subtitle>
+  <form [formGroup]="formulario" (ngSubmit)="salvar()">
+    <mat-form-field class="input">
+      <mat-select placeholder="Produto" formControlName="produto">
+        <mat-option value="x">Cristal Copos PT PP 330 L TRANSPARENTE (1000)</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <div fxLayout="row" fxLayout.sm="column" fxLayout.lt-sm="column" fxLayoutGap="10px">
+      <mat-form-field>
+        <mat-select placeholder="Lote" formControlName="lote">
+          <mat-option value="x">666</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Quantidade" type="number" formControlName="quantidade">
+      </mat-form-field>
+    </div>
+
+    <div fxLayoutAlign="end end">
+      <button mat-raised-button color="primary" type="submit">Salvar</button>
+    </div>
+  </form>
+</mat-card>

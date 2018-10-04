@@ -1,0 +1,93 @@
+<div class="mat-elevation-z6 menu">
+  <nav class="menu-container">
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+
+    <div class="flex-spacer"></div>
+
+    <button mat-button [matMenuTriggerFor]="usuario">
+      <span>Marcos Paulo </span>
+      <mat-icon>account_box</mat-icon>
+    </button>
+  </nav>
+
+</div>
+
+<div>
+  <router-outlet></router-outlet>
+  <app-footer></app-footer>
+</div>
+
+<mat-menu #menu="matMenu">
+  <button mat-menu-item routerLink="/Menu/Home">
+    <mat-icon>home</mat-icon>
+    <span>Home</span>
+  </button>
+  <button mat-menu-item routerLink="/Menu/Representantes">
+    <mat-icon>people</mat-icon>
+    <span>Representantes</span>
+  </button>
+  <button mat-menu-item routerLink="/Menu/Transportadoras">
+    <mat-icon>local_shipping</mat-icon>
+    <span>Transportadoras</span>
+  </button>
+  <button mat-menu-item [matMenuTriggerFor]="produtos">
+    <mat-icon>star</mat-icon>
+    <span>Produtos</span>
+  </button>
+  <button mat-menu-item routerLink="/Menu/Clientes">
+    <mat-icon>how_to_reg</mat-icon>
+    <span>Clientes</span>
+  </button>
+  <button mat-menu-item [matMenuTriggerFor]="movimentacao">
+    <mat-icon>swap_horiz</mat-icon>
+    <span>Movimentação</span>
+  </button>
+  <button mat-menu-item routerLink="/Menu/Vendas">
+    <mat-icon>local_grocery_store</mat-icon>
+    <span>Vendas</span>
+  </button>
+</mat-menu>
+
+
+<mat-menu #usuario="matMenu">
+  <button mat-menu-item>
+    <mat-icon>account_circle</mat-icon>
+    <span>Conta</span>
+  </button>
+  <button mat-menu-item>
+    <mat-icon>settings</mat-icon>
+    <span>Configurações</span>
+  </button>
+  <button mat-menu-item>
+    <mat-icon>exit_to_app</mat-icon>
+    <span>Sair</span>
+  </button>
+</mat-menu>
+
+<mat-menu #movimentacao="matMenu">
+  <button mat-menu-item routerLink="/Menu/Movimentacao">
+    <mat-icon>assessment</mat-icon>
+    <span>Controle</span>
+  </button>
+  <button mat-menu-item routerLink="/Menu/Movimentacao/Entrada">
+    <mat-icon>add_circle</mat-icon>
+    <span>Entrada</span>
+  </button>
+  <button mat-menu-item routerLink="/Menu/Movimentacao/Saida">
+    <mat-icon>remove_circle</mat-icon>
+    <span>Saida</span>
+  </button>
+</mat-menu>
+
+<mat-menu #produtos="matMenu">
+  <button mat-menu-item routerLink="/Menu/Produtos">
+    <mat-icon>assessment</mat-icon>
+    <span>Controle</span>
+  </button>
+  <button mat-menu-item routerLink="/Menu/Produtos/Gerencia">
+    <mat-icon>settings</mat-icon>
+    <span>Gerenciar</span>
+  </button>
+</mat-menu>

@@ -1,0 +1,20 @@
+table {
+    width: 100%;
+}
+
+.table-icons {
+    width: 10px;
+}
+
+.table-container {
+    overflow-x: scroll;
+}
+
+.table-column {
+    min-width: 120px;
+}
+
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+}

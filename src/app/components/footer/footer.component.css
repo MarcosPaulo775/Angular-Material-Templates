@@ -1,0 +1,23 @@
+.footer-container {
+    display: flex;
+    align-items: center;
+    padding: 35px 16px;
+    background-color: #3f51b5;
+    color: #fff;
+}
+
+.text-min {
+    font-size: small;
+}
+
+
+footer {
+    margin: auto;
+    width: 100%;
+    bottom: 0;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.flex-spacer {
+    flex-grow: 1;
+}

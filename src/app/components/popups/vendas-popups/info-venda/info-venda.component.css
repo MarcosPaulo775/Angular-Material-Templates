@@ -1,0 +1,25 @@
+.content {
+    height: 100%;
+    width: 400px;
+}
+
+table {
+    width: 100%;
+}
+
+.table-icons {
+    width: 10px;
+}
+
+.table-container {
+    overflow-x: scroll;
+}
+
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+}
+
+tr.mat-footer-row {
+    font-weight: bold;
+}

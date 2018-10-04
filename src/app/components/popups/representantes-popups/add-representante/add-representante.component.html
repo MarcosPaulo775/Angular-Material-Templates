@@ -1,0 +1,44 @@
+<h2 mat-dialog-title>Cadastro de Representante</h2>
+<div mat-dialog-content class="content">
+
+  <form [formGroup]="formulario" (ngSubmit)="_salvar()">
+    <div fxFlex fxLayout="column">
+      <h5>Dados Pessoais</h5>
+
+      <mat-form-field>
+        <input matInput placeholder="Nome" formControlName="nome" required>
+      </mat-form-field>
+
+      <div fxLayout="row" fxLayout.sm="column" fxLayout.lt-sm="column" fxLayoutGap="10px">
+        <mat-form-field>
+          <input matInput placeholder="Sigla do Representante" formControlName="sigla" maxlength="3" required>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput placeholder="Representação" formControlName="representacao" required>
+        </mat-form-field>
+      </div>
+
+      <mat-form-field>
+        <input matInput placeholder="Email" formControlName="email" required>
+      </mat-form-field>
+
+      <div fxLayout="row" fxLayout.sm="column" fxLayout.lt-sm="column" fxLayoutGap="10px">
+        <mat-form-field>
+          <input matInput placeholder="Telefone Movel" formControlName="foneMovel" inputMask="(999) 9999-9999">
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput placeholder="Telefone Fixo" formControlName="foneFixo" inputMask="(999) 9999-9999">
+        </mat-form-field>
+      </div>
+
+      <div mat-dialog-actions  fxLayoutAlign="center center">
+        <button mat-raised-button class="button-danger" (click)="onNoClick()">Cancelar</button>
+        <button mat-raised-button color="primary" (click)="save()">Salvar</button>
+      </div>
+
+    </div>
+  </form>
+
+</div>

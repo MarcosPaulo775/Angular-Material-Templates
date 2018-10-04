@@ -1,0 +1,69 @@
+.button {
+    color: rgba(0, 0, 0, .54);
+}
+
+.flex-spacer {
+    flex-grow: 1;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.estoque {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-size: xx-large;
+    text-align: center;
+    background-color: #546E7A;
+    color: white;
+}
+
+.estoqueC {
+    border-radius: 10px;
+    font-size: xx-large;
+    text-align: center;
+    background-color: #6D4C41;
+    color: white;
+}
+
+.container-estoque {
+    text-align: center;
+    min-width: 250px;
+    max-width: 250px;
+    font-size: medium;
+}
+
+.estoque-card {
+    background-color: #5C6BC0;
+    color: #FFFFFF;
+    width: 250px;
+    height: 80px;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 20px!important;
+}
+
+.estoque-column1 {
+    width: 60%;
+}
+
+.estoque-icon {
+    font-size: 70px
+}
+
+.estoque-text {
+    font-size: small;
+    font-weight: 550;
+}
+
+.estoque-cont {
+    font-size: 50px;
+}
+
+mat-toolbar {
+    margin-top: 56px;
+    font-family: 'Lobster', cursive;
+}

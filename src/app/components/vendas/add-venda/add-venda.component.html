@@ -1,0 +1,105 @@
+<mat-card>
+  <mat-card-content>
+    <div>
+      <h5>Escolha o Cliente</h5>
+      <form>
+        <mat-form-field>
+          <input type="text" placeholder="Buscar Cliente" aria-label="Number" matInput [formControl]="myControl"
+            [matAutocomplete]="auto">
+          <mat-autocomplete #auto="matAutocomplete">
+            <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+              {{option}}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+        <button mat-raised-button>Confirmar</button>
+      </form>
+    </div>
+
+    <div>
+      <div>
+        <h4>Cliente: ABCD Ind. de Alimentos LTDA</h4>
+      </div>
+      <div class="table-container">
+        <table mat-table [dataSource]="pedidos" class="mat-elevation-z8 table-dados">
+
+          <ng-container matColumnDef="produto">
+            <th mat-header-cell *matHeaderCellDef> Produto </th>
+            <td mat-cell *matCellDef="let element"> {{element.produto}} </td>
+            <td mat-footer-cell *matFooterCellDef> Total </td>
+          </ng-container>
+
+          <ng-container matColumnDef="quantidade">
+            <th mat-header-cell *matHeaderCellDef> Quantidade </th>
+            <td mat-cell *matCellDef="let element"> {{element.quantidade}} cx </td>
+            <td mat-footer-cell *matFooterCellDef></td>
+          </ng-container>
+
+          <ng-container matColumnDef="valorUnidade">
+            <th mat-header-cell *matHeaderCellDef> Valor Unidade </th>
+            <td mat-cell *matCellDef="let element"> {{element.valorUnidade | currency}} </td>
+            <td mat-footer-cell *matFooterCellDef></td>
+          </ng-container>
+
+          <ng-container matColumnDef="valorTotal">
+            <th mat-header-cell *matHeaderCellDef> Valor Total </th>
+            <td mat-cell *matCellDef="let element"> {{element.valorTotal | currency}} </td>
+            <td mat-footer-cell *matFooterCellDef> {{getTotalCost() | currency}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="editar">
+            <th mat-header-cell *matHeaderCellDef style="width:10px"></th>
+            <td mat-cell *matCellDef="let element">
+              <button mat-button (click)="_editPedido(element)">
+                <mat-icon>edit</mat-icon>
+              </button>
+            </td>
+            <td mat-footer-cell *matFooterCellDef></td>
+          </ng-container>
+
+
+          <ng-container matColumnDef="excluir">
+            <th mat-header-cell *matHeaderCellDef style="width:10px"></th>
+            <td mat-cell *matCellDef="let element">
+              <button mat-button (click)="delete(element)">
+                <mat-icon>delete</mat-icon>
+              </button>
+            </td>
+            <td mat-footer-cell *matFooterCellDef></td>
+          </ng-container>
+
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          <tr mat-footer-row *matFooterRowDef="displayedColumns"></tr>
+
+        </table>
+      </div>
+
+      <form [formGroup]="formularioPedido" (ngSubmit)="_salvar()">
+
+        <h5>Novo Pedido:</h5>
+
+        <mat-form-field>
+          <mat-select placeholder="Produto" formControlName="produto" required>
+            <mat-option>Copo 200ml</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <div fxLayout="row" fxLayout.sm="column" fxLayout.lt-sm="column" fxLayoutGap="10px">
+          <mat-form-field>
+            <input matInput placeholder="Quantidade de Caixas" type="number" formControlName="quantidade" required>
+          </mat-form-field>
+
+          <mat-form-field>
+            <input matInput placeholder="Valor Caixa" type="number" formControlName="preco" required>
+          </mat-form-field>
+        </div>
+
+        <div>
+          <button mat-raised-button type="submit">Salvar</button>
+        </div>
+      </form>
+    </div>
+  </mat-card-content>
+</mat-card>
