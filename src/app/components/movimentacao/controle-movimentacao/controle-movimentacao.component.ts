@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { MatTableDataSource, MatPaginator, MatSort } from '@angular/material';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 
@@ -26,7 +26,7 @@ const movimentacao: Movimentacao[] = [
   templateUrl: './controle-movimentacao.component.html',
   styleUrls: ['./controle-movimentacao.component.css']
 })
-export class ControleMovimentacaoComponent implements OnInit {
+export class ControleMovimentacaoComponent implements OnInit, AfterViewInit {
 
   //Table
   displayedColumns: string[] = ['produto', 'quantidade', 'lote', 'operacao', 'info', 'delete'];
@@ -43,6 +43,10 @@ export class ControleMovimentacaoComponent implements OnInit {
 
 
   ngOnInit() {
+
+  }
+
+  ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
   }

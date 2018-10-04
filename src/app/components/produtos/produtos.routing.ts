@@ -8,7 +8,21 @@ const produtosRoutes: Routes = [
     {
         path: '',
         component: ProdutosComponent,
-        children: []
+        children: [
+            {
+                path: '',
+                redirectTo: 'Controle',
+                pathMatch: 'full'
+            },
+            {
+                path: 'Controle',
+                loadChildren: './controle-produtos/controle-produtos.module#ControleProdutosModule'
+            },
+            {
+                path: 'Gerencia',
+                loadChildren: './gerencia-produtos/gerencia-produtos.module#GerenciaProdutosModule'
+            },
+        ]
     }
 ]
 

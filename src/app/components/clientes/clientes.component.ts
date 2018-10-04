@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild , AfterViewInit  } from '@angular/core';
 import { MatTableDataSource, MatPaginator, MatSort } from '@angular/material';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 
@@ -20,6 +20,7 @@ const Clientes: Cliente[] = [
   { nome: "Marcos", CPF: "064.439.361-08", email: "marcos775paulo@hotmail.com", telefone: "0000-0000", celular: "1111-1111" },
   { nome: "João", CPF: "064.439.361-08", email: "joao@hotmail.com", telefone: "0000-0000", celular: "1111-1111" },
   { nome: "Maria", CPF: "064.439.361-08", email: "maria@hotmail.com", telefone: "0000-0000", celular: "1111-1111" },
+  { nome: "Maria", CPF: "064.439.361-08", email: "maria@hotmail.com", telefone: "0000-0000", celular: "1111-1111" },
 ];
 
 @Component({
@@ -27,7 +28,7 @@ const Clientes: Cliente[] = [
   templateUrl: './clientes.component.html',
   styleUrls: ['./clientes.component.css']
 })
-export class ClientesComponent implements OnInit {
+export class ClientesComponent implements OnInit , AfterViewInit {
 
   //Table
   displayedColumns: string[] = ['nome', 'CPF', 'email', 'info', 'edit', 'delete'];
@@ -45,9 +46,12 @@ export class ClientesComponent implements OnInit {
 
 
   ngOnInit() {
-    this.dataSource.paginator = this.paginator;
-    this.dataSource.sort = this.sort;
+
   }
+
+  ngAfterViewInit() {
+    this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.sort;    }
 
   applyFilter(filterValue: string) {
     this.dataSource.filter = filterValue.trim().toLowerCase();

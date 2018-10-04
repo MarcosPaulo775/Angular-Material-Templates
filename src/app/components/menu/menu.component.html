@@ -32,7 +32,7 @@
     <mat-icon>local_shipping</mat-icon>
     <span>Transportadoras</span>
   </button>
-  <button mat-menu-item routerLink="/Menu/Produtos">
+  <button mat-menu-item [matMenuTriggerFor]="produtos">
     <mat-icon>star</mat-icon>
     <span>Produtos</span>
   </button>
@@ -78,5 +78,16 @@
   <button mat-menu-item routerLink="/Menu/Movimentacao/Saida">
     <mat-icon>remove_circle</mat-icon>
     <span>Saida</span>
+  </button>
+</mat-menu>
+
+<mat-menu #produtos="matMenu">
+  <button mat-menu-item routerLink="/Menu/Produtos">
+    <mat-icon>assessment</mat-icon>
+    <span>Controle</span>
+  </button>
+  <button mat-menu-item routerLink="/Menu/Produtos/Gerencia">
+    <mat-icon>settings</mat-icon>
+    <span>Gerenciar</span>
   </button>
 </mat-menu>

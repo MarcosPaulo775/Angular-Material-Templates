@@ -5,3 +5,8 @@ mat-form-field{
 .content{
     height: 450px;
 }
+
+.button-danger {
+    background-color: #D32F2F;
+    color: #fff;
+}

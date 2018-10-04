@@ -6,9 +6,6 @@ import { ProdutosRoutingModule } from './produtos.routing';
 import { SharedModule } from '../../shared/shared.module';
 
 import { ProdutosComponent } from './produtos.component';
-import { AddProdutoComponent } from '../popups/produtos-popups/add-produto/add-produto.component';
-import { InfoProdutoComponent } from '../popups/produtos-popups/info-produto/info-produto.component';
-
 
 @NgModule({
   imports: [
@@ -18,7 +15,6 @@ import { InfoProdutoComponent } from '../popups/produtos-popups/info-produto/inf
     ReactiveFormsModule,
     SharedModule
   ],
-  declarations: [ProdutosComponent, AddProdutoComponent, InfoProdutoComponent],
-  entryComponents: [AddProdutoComponent, InfoProdutoComponent]
+  declarations: [ProdutosComponent],
 })
 export class ProdutosModule { }

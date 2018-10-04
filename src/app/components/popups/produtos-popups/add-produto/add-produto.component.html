@@ -27,18 +27,18 @@
       <div fxLayout="row" fxLayout.sm="column" fxLayout.lt-sm="column" fxLayoutGap="10px">
         <mat-form-field>
           <mat-select placeholder="Capacidade (ml)" formControlName="capacidade" required>
-              <mat-option value="x">200 ml</mat-option>
-              <mat-option value="x">250 ml</mat-option>
-              <mat-option value="x">300 ml</mat-option>
-              <mat-option value="x">330 ml</mat-option>
-            </mat-select>
+            <mat-option value="x">200 ml</mat-option>
+            <mat-option value="x">250 ml</mat-option>
+            <mat-option value="x">300 ml</mat-option>
+            <mat-option value="x">330 ml</mat-option>
+          </mat-select>
         </mat-form-field>
 
         <mat-form-field>
           <mat-select placeholder="Cor" formControlName="cor" required>
-              <mat-option value="x">Transparente</mat-option>
-              <mat-option value="x">Branco</mat-option>
-              <mat-option value="x">Bege</mat-option>
+            <mat-option value="x">Transparente</mat-option>
+            <mat-option value="x">Branco</mat-option>
+            <mat-option value="x">Bege</mat-option>
           </mat-select>
         </mat-form-field>
       </div>
@@ -47,29 +47,29 @@
       <div fxLayout="row" fxLayout.sm="column" fxLayout.lt-sm="column" fxLayoutGap="10px">
         <mat-form-field>
           <mat-select placeholder="Especificação" formControlName="especificacao" required>
-              <mat-option value="x">Liso</mat-option>
-              <mat-option value="x">Estriado</mat-option>
+            <mat-option value="x">Liso</mat-option>
+            <mat-option value="x">Estriado</mat-option>
           </mat-select>
         </mat-form-field>
 
         <mat-form-field>
           <mat-select placeholder="Marca" formControlName="marca" required>
-              <mat-option value="x">Cristal Copos</mat-option>
-              <mat-option value="x">Pollycopos</mat-option>
+            <mat-option value="x">Cristal Copos</mat-option>
+            <mat-option value="x">Pollycopos</mat-option>
           </mat-select>
         </mat-form-field>
       </div>
 
       <mat-form-field>
         <mat-select placeholder="Caixa" formControlName="caixa" required>
-            <mat-option value="x">50x100</mat-option>
-            <mat-option value="x">25x100</mat-option>
-            <mat-option value="x">20x100</mat-option>
+          <mat-option value="x">50x100</mat-option>
+          <mat-option value="x">25x100</mat-option>
+          <mat-option value="x">20x100</mat-option>
         </mat-select>
       </mat-form-field>
 
       <div mat-dialog-actions fxLayoutAlign="center center">
-        <button mat-raised-button (click)="onNoClick()">Cancelar</button>
+        <button mat-raised-button class="button-danger" (click)="onNoClick()">Cancelar</button>
         <button mat-raised-button color="primary" (click)="save()">Salvar</button>
       </div>
     </div>
